@@ -1,0 +1,39 @@
+<header class="header-home clearfix">
+    <div class="container header-container clearfix">
+        <div class="logo pull-left clearfix">
+            <a ui-sref="veg.home">Logo</a>
+        </div>
+        <div class="header-options pull-right" dropdown="" auto-close="outsideClick">
+            <a href="" dropdown-toggle="">Login</a>
+            <div class="dropdown-menu" style="padding: 10px">
+                <div>
+                    <!--<span>username</span>-->
+                    <div class="input-group input-group-sm" style="padding-bottom: 10px">
+                        <span class="input-group-addon" id="sizing-addon3"><span class="icon-user"></span></span>
+                        <input type="text" class="form-control" placeholder="Username or Mobile" aria-describedby="sizing-addon3">
+                    </div>
+                    <!--<span>Password</span>-->
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-addon" id="Span1"><span class="icon-user"></span></span>
+                        <input type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon3">
+                    </div>
+                    <div class="action-buttons" style="float: right; padding-top: 10px">
+                        <button class="btn btn-primary">Login</button>
+                        <button class="btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <a href="#/user">Sign up</a>
+            <a href="">Account</a>
+            <a class="cart" href=""><span class="icon-cart"></span></a>
+        </div>
+    </div>
+</header>
+
+<div class="container clearfix user-registration">
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-lg-9 col-md-9 col-xs-9 clearfix" style="" ui-view></div>
+
+    </div>
+
+</div>

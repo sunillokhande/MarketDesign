@@ -1,0 +1,230 @@
+<style>
+    .user-registration .nav-tabs li.active a {
+        border-bottom: 3px solid #336699;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .user-registration .nav-tabs li a:hover {
+        background: none;
+        color: #336699;
+    }
+
+    .user-registration .nav-tabs li a {
+        border: 0;
+        border-radius: 0;
+        color: #666;
+    }
+
+    .user-registration .nav-tabs li.active a:hover {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .user-registration .nav-tabs li a:hover {
+        background: none;
+        color: #336699;
+    }
+
+
+    form {
+
+        margin: 10px auto;
+        padding: 10px 20px;
+        border-radius: 8px;
+    }
+
+    h1 {
+        margin: 0 0 30px 0;
+        text-align: center;
+    }
+
+
+    fieldset {
+        margin-bottom: 30px;
+        border: none;
+    }
+
+    legend {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    label.light {
+        font-weight: 300;
+        display: inline;
+    }
+    .btnAction {
+        border:0;
+        background: #386092;
+        font-size: 14px;
+        padding: 5px 20px;
+        color: #fff;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-right: 5px;
+    }
+    .btnCancel {
+        border:0;
+        background: #fff;
+        font-size: 14px;
+        padding: 5px 10px;
+        color: #000;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    @media screen and (min-width: 480px) {
+
+        form {
+
+        }
+
+    }
+
+    .form-group input[type=text],
+    .form-group input[type=password],
+    .form-group input[type=email],
+    .form-group textarea,
+    .form-group select
+    {
+        width:580px;
+    }
+    .form-group .inline{
+        width:580px;
+    }
+    .form-group .inline select{
+        width: 270px;
+    }
+    .form-group .inline-left{
+        float:left;
+    }
+    .form-group .inline-right{
+        float:right;
+    }
+    .form-select-inline{
+        margin-bottom: 15px;
+    }
+</style>
+
+
+            <div class="">
+                <h3>Registration</h3>
+            </div>
+            <div class="user-registration">
+                <ul class="nav nav-tabs">
+                <li ng-class="{active:isSet(1)}"><a href ng-click="setTab(1)">Home Use</a></li>
+                <li ng-class="{active:isSet(2)}"><a href ng-click="setTab(2)">Commercial</a></li>
+                </ul>
+                <div ng-show="isSet(1)">
+                    <form class="frmVertical" method="post">
+                       <fieldset>
+                            <legend>Your profile info</legend>
+                           <div class="form-group">
+                               <input class="form-control" type="text" placeholder="Full name">
+                           </div>
+
+
+
+                           <div class="form-group">
+                               <input type="email" class="form-control" placeholder="Email address">
+                           </div>
+
+                           <div class="form-group">
+                               <input type="email" class="form-control" placeholder="Mobile number 1">
+                           </div>
+                           <div class="form-group">
+                               <input type="email" class="form-control" placeholder="Mobile number 2 (optional)">
+                           </div>
+
+                           <div class="form-group">
+                               <div class="inline">
+                                   <select class="form-control inline-left form-select-inline">
+                                       <option selected disabled>State?</option>
+                                       <option>Maharashtra</option>
+                                       <option>Gujarat</option>
+                                       <option>Madhya Pradesh</option>
+                                       <option>Rajashtan</option>
+                                   </select>
+
+                                   <select class="form-control inline-right form-select-inline">
+                                       <option selected disabled>District?</option>
+                                       <option>Pune</option>
+                                       <option>Mumbai</option>
+                                       <option>Kholapur</option>
+                                       <option>Sholapur</option>
+                                   </select>
+                               </div>
+                           </div>
+                           <div class="form-group">
+                               <div class="inline">
+                                   <select class="form-control inline-left form-select-inline">
+                                       <option selected disabled>City?</option>
+                                       <option>Maharashtra</option>
+                                       <option>Gujarat</option>
+                                       <option>Madhya Pradesh</option>
+                                       <option>Rajashtan</option>
+                                   </select>
+
+                                   <select class="form-control inline-right form-select-inline">
+                                       <option selected disabled>Area?</option>
+                                       <option>Pune</option>
+                                       <option>Mumbai</option>
+                                       <option>Kholapur</option>
+                                       <option>Sholapur</option>
+                                   </select>
+                               </div>
+                           </div>
+                           <div class="form-group">
+                               <textarea placeholder="Full address"></textarea>
+                           </div>
+
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Your pick point detail</legend>
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option selected disabled>Which branch?</option>
+                                    <option>Pune</option>
+                                    <option>Mumbai</option>
+                                    <option>Kholapur</option>
+                                    <option>Sholapur</option>
+                                </select>
+
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Full address" disabled></textarea>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Login detail</legend>
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="password" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="password" placeholder="Confirm password">
+                            </div>
+
+                        </fieldset>
+                        <div class="form-group inline cta">
+                            <button type="submit" class="btnAction">Register</button>
+                            <button type="submit" class="btnCancel">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+                <div ng-show="isSet(2)">
+                    <h4>Tab 2</h4>
+                </div>
+            </div>
+

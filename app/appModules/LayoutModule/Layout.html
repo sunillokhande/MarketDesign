@@ -1,0 +1,113 @@
+<!--<header class="header-newsfeed clearfix">-->
+    <!--<div class="container header-container clearfix">-->
+        <!--<div class="pull-left clearfix">-->
+            <!--<h2><a>Logo</a></h2>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</header>-->
+
+<!--<div class="container newsfeed-container clearfix" style="height:100%">-->
+    <!--<div class="row clearfix">-->
+        <!--<div class="left-panel col-lg-3 col-md-3 clearfix" ng-if="$state.current.name!='rejoyos.previous-notifications'">-->
+            <!--<div>left panel</div>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash;<div class="middle-panel col-xs-8" style="background-color:gray">&ndash;&gt;-->
+            <!--<ui-view></ui-view>-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--</div>-->
+<!--</div>-->
+
+<!-- type head template -->
+
+<script type="text/ng-template" id="customTemplate.html">
+    <a>
+        <!--<img ng-src="{{match.model.photo}}" width="16">-->
+        <span ng-bind-html="match.label | typeaheadHighlight:query"></span>
+    </a>
+</script>
+<!-- type head template -->
+
+
+<!--copied-->
+<header class="header-home clearfix">
+    <div class="container header-container clearfix">
+        <div class="logo pull-left clearfix">
+            <a ui-sref="veg.home">Logo</a>
+            <!--<img src="images/logoWhite.png" ui-sref="veg.home" alt="" class="hidden-xs hidden-sm"/>-->
+            <!--<img class="responsive-logo hidden-md hidden-lg" src="images/logoWhiteCopy.png" ui-sref="veg.home" alt=""/>-->
+        </div>
+        <div class="header-options pull-right">
+            <a>Login</a>
+            <a>Sign up</a>
+            <a>Account</a>
+            <a class="cart" href="">Cart</a>
+        </div>
+    </div>
+</header>
+<!-- header -->
+<div class="container feed-container clearfix">
+    <div class="row">
+        <!-- Left Menu -->
+        <nav class="navbar navbar-default navbar-static-top" style="position:fixed;height:60px">
+            <div class="container custom-container" style="padding:10px;text-align:center">
+                <input style="width:20%;display:inline;height:40px" type="text" ng-model="$parent.selectedUser" placeholder="Type or select branch"
+                       typeahead="state for state in states | filter:$viewValue"
+                       typeahead-template-url="customTemplate.html" typeahead-no-results="noResults"  class="form-control autofocus">
+                <span class="caret" style="margin-left:-25px"></span>
+                <input type="text" class="form-control" style="width:70%;height:40px;display:inline" placeholder="Search by name">
+                <button class="btn btn-active" style="height:40px">Search</button>
+            </div>
+        </nav>
+        <!--<div class="basic-info col-lg-12 col-md-12 col-xs-12">-->
+            <!--<ul>-->
+                <!--<li><label>Branch</label></li>-->
+                <!--<li><input class="search-dropdown" type="text" placeholder="Select"><span class="custom-caret caret"></span></input></li>-->
+                <!--&lt;!&ndash;<option>Deccan</option>&ndash;&gt;-->
+                <!--&lt;!&ndash;<option>Karve Road</option>&ndash;&gt;-->
+                <!--&lt;!&ndash;<option>Kothrud</option>&ndash;&gt;-->
+                <!--&lt;!&ndash;<option>Hadapsar</option>&ndash;&gt;-->
+                <!--<li class="separator"></li>-->
+                <!--<li class="input-group search-box">-->
+                    <!--<input type="text" placeholder="Search by name">-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<button class="btn btn-primary search-btn">Search</button>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    </div>
+    <div class="row">
+        <div class="left-panel col-lg-3 col-md-3 col-xs-3 clearfix">
+            <div class="cart-items" style="border:1px solid #D4D4D4;margin-bottom:10px">
+                <nav class="navbar navbar-default">
+                    <span class="navbar-brand" href="#">Cart Items</span>
+                    <span class="glyphicon glyphicon-th" style="float: right;color:dimgray;font-size: 20px;cursor:pointer;padding: 10px;"></button>
+                </nav>
+                <div class="card-title"></div>
+                <ol>
+                    <li>item 1</li>
+                    <li>item 2</li>
+                    <li>item 3</li>
+                    <li>item 4</li>
+                </ol>
+            </div>
+            <div class="most-selling-items" style="border:1px solid #D4D4D4">
+                <nav class="navbar navbar-default">
+                    <span class="navbar-brand" href="#">Most Selling</span>
+                    <span class="glyphicon glyphicon-th" style="float: right;color:dimgray;font-size: 20px;cursor:pointer;padding: 10px;"></button>
+
+                </nav>
+                <div class="card-title"></div>
+                <ol>
+                    <li>item 1</li>
+                    <li>item 2</li>
+                    <li>item 3</li>
+                    <li>item 4</li>
+                </ol>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-xs-6 clearfix" style="" ui-view></div>
+        <div class="right-panel col-lg-3 col-md-3 col-xs-3 clearfix"></div>
+    </div>
+</div>

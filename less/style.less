@@ -1,0 +1,171 @@
+
+//Global CSS for Variables
+
+//font-family
+@blendas-reg: "blenda_scriptregular",sans-serif;
+@opens-light: "open_sanslight",sans-serif;
+@opens-light-italic: "open_sanslight_italic",sans-serif;
+@opens-reg: "open_sansregular",sans-serif;
+@opens-semibold: "open_sanssemibold",sans-serif;
+@opens-bold: "open_sansbold",sans-serif;
+@merris-reg: "merriweather_sansregular",sans-serif;
+@merris-book: "merriweather_sansbook",sans-serif;
+@merris-bold: "merriweather_sansbold",sans-serif;
+@merris-bold-italic: "merriweather_sansbold_italic",sans-serif;
+@rejoyos: "rejoyos";
+
+
+//Selection of content with border, radio buttons, modal-header bg, badge bg
+@selection-color: #C37F4E;
+
+.header-home {
+  background-color: @selection-color;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  z-index: 600;
+  .logo {
+    //padding: 10px;
+    a{
+      text-decoration:none;
+      color:white;
+      padding:5px;
+      font-size:30px;
+    }
+    cursor: pointer;
+    img {
+      width: 150px;
+    }
+    .responsive-logo {
+      width: 30px;
+      margin-left: 50px;
+    }
+  }
+  .header-options {
+      padding-top: 10px;
+    a {
+      padding: 5px;
+      padding-top:10px;
+      text-decoration: none;
+      color: white;
+    }
+    .cart{
+      font-size:20px;
+    }
+  }
+}
+
+//****************************************** header section start ***********************************
+.header-home {
+  z-index:1001;
+  .header-container {
+    .row {
+      .left-panel {
+        .navbar-default {
+          background: url("../images/background.jpeg") repeat;
+          border: 2px solid #000;
+          position: fixed;
+          width: 19%;
+          .nav-collapse {
+            padding-left: 0;
+            padding-right: 0;
+            overflow-x: hidden;
+
+          }
+        }
+      }
+    }
+    .header-options{
+      a{
+        font-family: "merriweather_sansbold", sans-serif;
+        font-size:14px;
+      }
+      .cart{
+        font-size:20px;
+      }
+    }
+  }
+}
+//****************************************** header section end ***********************************
+
+//****************************** full body start *******************************************
+.feed-container{
+  height: 100% !important;
+  width:100%;
+  background-color: #ebebeb;
+  padding-top: 50px;
+  .navbar-container {
+    height:280px !important;
+    background: url("../images/background.jpeg");
+    margin-bottom:10px;
+    .navbar-static-top {
+      background-color: black;
+      opacity:0.6;
+      height:280px;
+    }
+  }
+  .row{
+//    height: 100%;
+
+    .left-panel{
+
+    }
+    .middle-panel{
+      background-color:rgb(235, 235, 235);
+      height: 100%;
+      overflow:auto;
+      .card-wrapper{
+        .media-custom{
+          background-color: #E7E0E0;
+          box-shadow: 3px 5px 5px gray;
+          border-radius:10px;
+          padding:10px;
+          margin-left:5px;
+          margin-right:5px;
+        }
+        .vege-card{
+          padding:5px;
+          background-color:white;
+          width:48%;
+          float:left;
+          position:relative;
+          .card-img-sec{
+
+            img{
+              height:100px;
+              width:100px;
+            }
+          }
+          .card-body-sec{
+            padding:5px;
+            font-family: @merris-reg;
+            .card-title{
+              font-size:18px;
+            }
+            span{
+              font-size:14px;
+            }
+          }
+        }
+      }
+    }
+    .right-panel {
+      //      margin-top:60px;
+    }
+  }
+}
+.user-registration{
+  .nav-tabs {
+    li {
+      .active {
+        a {
+          border-bottom: 3px solid #336699;
+          border-top: none;
+          border-left: none;
+//          border-right: none;
+
+        }
+      }
+    }
+  }
+}

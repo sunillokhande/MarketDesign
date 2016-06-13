@@ -1,0 +1,111 @@
+.header-home {
+  background-color: #c37f4e;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  z-index: 600;
+}
+.header-home .logo {
+  cursor: pointer;
+}
+.header-home .logo a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  font-size: 30px;
+}
+.header-home .logo img {
+  width: 150px;
+}
+.header-home .logo .responsive-logo {
+  width: 30px;
+  margin-left: 50px;
+}
+.header-home .header-options {
+  padding-top: 10px;
+}
+.header-home .header-options a {
+  padding: 5px;
+  padding-top: 10px;
+  text-decoration: none;
+  color: white;
+}
+.header-home .header-options .cart {
+  font-size: 20px;
+}
+.header-home {
+  z-index: 1001;
+}
+.header-home .header-container .row .left-panel .navbar-default {
+  background: url("../images/background.jpeg") repeat;
+  border: 2px solid #000;
+  position: fixed;
+  width: 19%;
+}
+.header-home .header-container .row .left-panel .navbar-default .nav-collapse {
+  padding-left: 0;
+  padding-right: 0;
+  overflow-x: hidden;
+}
+.header-home .header-container .header-options a {
+  font-family: "merriweather_sansbold", sans-serif;
+  font-size: 14px;
+}
+.header-home .header-container .header-options .cart {
+  font-size: 20px;
+}
+.feed-container {
+  height: 100% !important;
+  width: 100%;
+  background-color: #ebebeb;
+  padding-top: 50px;
+}
+.feed-container .navbar-container {
+  height: 280px !important;
+  background: url("../images/background.jpeg");
+  margin-bottom: 10px;
+}
+.feed-container .navbar-container .navbar-static-top {
+  background-color: black;
+  opacity: 0.6;
+  height: 280px;
+}
+.feed-container .row .middle-panel {
+  background-color: #ebebeb;
+  height: 100%;
+  overflow: auto;
+}
+.feed-container .row .middle-panel .card-wrapper .media-custom {
+  background-color: #E7E0E0;
+  box-shadow: 3px 5px 5px gray;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.feed-container .row .middle-panel .card-wrapper .vege-card {
+  padding: 5px;
+  background-color: white;
+  width: 48%;
+  float: left;
+  position: relative;
+}
+.feed-container .row .middle-panel .card-wrapper .vege-card .card-img-sec img {
+  height: 100px;
+  width: 100px;
+}
+.feed-container .row .middle-panel .card-wrapper .vege-card .card-body-sec {
+  padding: 5px;
+  font-family: "merriweather_sansregular", sans-serif;
+}
+.feed-container .row .middle-panel .card-wrapper .vege-card .card-body-sec .card-title {
+  font-size: 18px;
+}
+.feed-container .row .middle-panel .card-wrapper .vege-card .card-body-sec span {
+  font-size: 14px;
+}
+.user-registration .nav-tabs li .active a {
+  border-bottom: 3px solid #336699;
+  border-top: none;
+  border-left: none;
+}
